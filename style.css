@@ -9,20 +9,25 @@ body {
 
  .title {
    font-family:'Montserrat', sans-serif;
-   font-size: 50px;
-   text-align: left;
+   font-size: 40px;
+   text-align: center;
+   text-shadow: hotpink;
    height: 300px;
    background-image: url('https://images.unsplash.com/photo-1606278483460-25d13da45337?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW4lMjByYW5nZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
    background-size: auto;
    background-repeat: no-repeat;
+   background-position-y: center;
    flex-grow: inherit;
+   border: 8px solid rgb(70, 68, 68)
  }
 
  p {
+  color:rgb(160, 4, 152);
+  font-family: 'Fraunces', serif;
    margin-left: auto;
    margin-right: auto;
-   font-size: 30px;
+   font-size: 25px;
    width: 600px;
-   height: 107px;
-  background-color: rgb(235, 99, 235)
+   height: 100px;
+  background-color: rgba(15, 15, 15, 0.753)
  }

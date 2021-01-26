@@ -14,7 +14,7 @@ async function fetchData(brewery) {
   }
 }
 
-function showBrewery(data) {
+function showBreweryData(data) {
   console.log(data)
   const breweryInfo = `
     <h1> Brewery Name: ${data.name}
@@ -48,6 +48,8 @@ const form = document.querySelector('form')
    console.log(inputValue)
    fetchData(inputValue)
  })
+
+ removeBrewery()
     
 function removeBrewery() {
   const breweryContainer = document.querySelector('#brewery-data')
