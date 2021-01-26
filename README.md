@@ -32,6 +32,24 @@ Find a hiking/running trail and a brewery for the perfect day adventure.  This a
         "created_at": "2018-07-24T01:34:05.354Z"
     },
 
+[trailApi](https://rapidapi.com/trailapi/api/trailapi)
+
+{13 items
+"city":"Fraser"
+"state":"Colorado"
+"country":"United States"
+"name":"High Lonesome/ Caribou/ Strawberry West Trail "
+"parent_id":NULL
+"unique_id":930
+"directions":"From Idaho Springs take I-70 west to US HWY 40 drive over Berthoud Pass to just past Fraser turn right onto CR 8 continue on CR 8 to FR 128 turn left north drive about 2 miles to the Devils Thumb Trailhead on the right there may or may not be a sign marking the turn off to the trailhead &lt;br /&gt;&lt;br /&gt;"
+"lat":39.98636
+"lon":-105.73665
+"description":NULL
+"date_created":NULL
+"children":[]0 items
+"activities":[...]1 item
+}
+
 [Active Network API](https://developer.active.com/)
 
 [Recreation.gov](https://ridb.recreation.gov/docs)
