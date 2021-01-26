@@ -6,7 +6,7 @@
 
 ## Project Description
 
-Find a hiking/running trail and a brewery for the perfect day adventure.  This app will allow you to select your city and radius to generate a random trail and brewery.
+After a day of hiking and exploring the outdoors, there is nothing better than a nice cold beer.  Using the Ale's and Trails app, users will make the process of looking for a deciding on a brewery nearby.  
 
 ## API and Data Sample
 
@@ -32,34 +32,11 @@ Find a hiking/running trail and a brewery for the perfect day adventure.  This a
         "created_at": "2018-07-24T01:34:05.354Z"
     },
 
-[trailApi](https://rapidapi.com/trailapi/api/trailapi)
-
-{13 items
-"city":"Fraser"
-"state":"Colorado"
-"country":"United States"
-"name":"High Lonesome/ Caribou/ Strawberry West Trail "
-"parent_id":NULL
-"unique_id":930
-"directions":"From Idaho Springs take I-70 west to US HWY 40 drive over Berthoud Pass to just past Fraser turn right onto CR 8 continue on CR 8 to FR 128 turn left north drive about 2 miles to the Devils Thumb Trailhead on the right there may or may not be a sign marking the turn off to the trailhead &lt;br /&gt;&lt;br /&gt;"
-"lat":39.98636
-"lon":-105.73665
-"description":NULL
-"date_created":NULL
-"children":[]0 items
-"activities":[...]1 item
-}
-
-[Active Network API](https://developer.active.com/)
-
-[Recreation.gov](https://ridb.recreation.gov/docs)
-
-
 ## Wireframes
 
 [Ales && Trails Wireframe](https://whimsical.com/ales-trails-ETpbeYzjcrZqAyeepYaR6n)
 
-<img width="457" alt="Screen Shot 2021-01-25 at 10 20 48 PM" src="https://user-images.githubusercontent.com/75773700/105807873-a16efc00-5f5b-11eb-9e74-f162fe84474a.png">
+<img width="458" alt="Screen Shot 2021-01-26 at 8 51 28 AM" src="https://user-images.githubusercontent.com/75773700/105877605-060a7500-5fb5-11eb-8c34-0cfdf4f7a2a3.png">
 
 ### MVP/PostMVP
 
@@ -67,14 +44,14 @@ This application will provide an input field upon loading, the user will enter t
 
 #### MVP 
 
-- Implement random brewery and trail selections
+- Connect to brewery API to output local brewerys to user
 - Generates information within parameters specified by user input
 - Responds to both cell phone and desktop screens 
 
 #### PostMVP  
 
 - Animation 
-- Incorporate facts about brewery/hiking
+- Incorporate facts about hiking
 - Add unique UI and event listeners
 
 ## Project Schedule
@@ -83,7 +60,7 @@ This application will provide an input field upon loading, the user will enter t
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |Jan 26| Project Approval / Core App Structure (HTML, CSS, etc.) | Incomplete
-|Jan 27| Connect to API/s | Incomplete
+|Jan 27| Connect to API | Incomplete
 |Jan 28| Initial Clickable Model/ DOM manipulation| Incomplete
 |Jan 29| MVP | Incomplete
 |Feb 1| Presentations/Project Submission | Incomplete
@@ -96,9 +73,11 @@ This application will provide an input field upon loading, the user will enter t
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 5hrs| 0hrs | 0hrs |
-| Working with API | H | 6hrs| 0hrs | 0hrs |
-| Total | H | 11hrs| 0hrs | 0hrs |
+| Adding Form | H | 8hrs| 0hrs | 0hrs |
+| Working with API | H | 10hrs | 0hrs | 0hrs |
+| DOM manipulation | H | 16hrs | 0hrs | 0hrs |
+| Responsive CSS | H | 6hrs | 0hrs | 0hrs |
+| Total | H | 40hrs| 0hrs | 0hrs |
 
 <!-- ## Code Snippet
 
