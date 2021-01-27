@@ -26,12 +26,19 @@ const getBreweryData= () => {
         const city = brew.locality
         const state = brew.region
         const zip = brew.postalCode
+        const address = street + city + state + zip
+
+        const breweryInfo = document.createElement('div')
+        breweryInfo.textContent = `${breweryName} ${website} ${description} ${type} ${established} ${address} `
+        brewDiv.append(breweryInfo)
+
         // const image = brew.brewery.images.squareMedium
-        console.log(breweryName)
 
+        const image = document.createElement('img')
 
-        
- 
+        image.setAttribute('src', brew.brewery.images.squareMedium)
+        image.setAttribute('alt', 'brewery-logo')
+        brewDiv.append(image)
 
       })
     })
