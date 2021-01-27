@@ -8,11 +8,12 @@ body {
  }
 
  .title {
+   color: whitesmoke;
    font-family:'Montserrat', sans-serif;
    font-size: 40px;
    text-align: center;
    text-shadow: hotpink;
-   height: 300px;
+   height: 200px;
    background-image: url('https://images.unsplash.com/photo-1606278483460-25d13da45337?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW4lMjByYW5nZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
    background-size: auto;
    background-repeat: no-repeat;
@@ -22,12 +23,23 @@ body {
  }
 
  p {
-  color:rgb(160, 4, 152);
+  color:rgb(146, 113, 144);
   font-family: 'Fraunces', serif;
+  font-weight: 50px;
    margin-left: auto;
    margin-right: auto;
-   font-size: 25px;
+   font-size: 15px;
    width: 600px;
-   height: 100px;
+   height: 35px;
   background-color: rgba(15, 15, 15, 0.753)
+ }
+
+ .search {
+   background-color: rgb(63, 63, 63);
+  text-align: center;
+  color:rgb(143, 0, 148);
+  width: auto;
+  /* justify-content: center; */
+  /* width: 200px; */
+  /* align-self: center; */
  }

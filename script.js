@@ -1,61 +1,83 @@
-// API docs  http://api.brewerydb.com/v2/{endpoint}/?key=be58abef0327aba1aa703a78ffa031fd
+// API docs = http://api.brewerydb.com/v2/{endpoint}/?key=be58abef0327aba1aa703a78ffa031fd
+const url = "https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd"
 
-async function fetchData(brewery) {
 
-  const url = `http://api.brewerydb.com/v2/brewery/KRB0Bo/${endpoint}/?key=be58abef0327aba1aa703a78ffa031fd`
-  try {
-    let res = await axios.get(url)
-    console.log(res.data[0])
-    const data = res.data[0]
-    removeBrewery()
-    showBreweryData(data)
-  } catch (err) {
-    console.log(err)
-  }
-}
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
 
-function showBreweryData(data) {
-  console.log(data)
-  const breweryInfo = `
-    <h1> Brewery Name: ${data.name}
-    <h2> Address: ${data.streetAddress}
-    <h2> City: ${data.locality}
-    <h2> State: ${data.region} 
-    <h4> Website: ${data.website}
-    <p>  Hours: ${data.hoursOfOperationExplicitString}
-    <p>  Notes: ${data.hoursOfOperationNotes}
-    <p> Brewery Type: ${data.locationType}`
-  
-  removeBrewery()
+axios.get(url)
+  .then((res) => {
+  console.log(res)
+})
+  .catch((err) => {
+  console.log(err)
+})
 
-  console.log(breweryInfo)
-  let dataContainer = document.querySelector('#brewery-data')
-  dataContainer.insertAdjacentHTML('afterend', breweryInfo)
-  return breweryInfo
+// const getBrewery = async () => {
+//   // async function fetchData(brewery) {
 
-  removeBrewery()
-  
-}
+//   try {
+//     const apiKey= 'be58abef0327aba1aa703a78ffa031fd'
+//     let res = await axios.get("http://api.brewerydb.com/v2/")
+//     console.log(res.data.message)
+//     // let endpont = body.querySelector('#brewery-search').value
+//     let brewerySearch = Object.keys(res.data.message)
+   
+//     console.log(brewerySearch)
+//     } catch (err) {
+//       console.log(err)
+//     }
+//   }
 
-const form = document.querySelector('form')
- console.log(form)
- form.addEventListener('submit', (e) => {
-   e.preventDefault()
+// getBrewery()
 
-   removeBrewery()
+// function showBreweryData(data) {
+//   console.log(data)
+//   const breweryInfo = `
+//     <h1> Brewery Name: ${data.name}
+//     <h2> Address: ${data.streetAddress}
+//     <h2> City: ${data.locality}
+//     <h2> State: ${data.region} 
+//     <h4> Website: ${data.website}
+//     <p>  Hours: ${data.hoursOfOperationExplicitString}
+//     <p>  Notes: ${data.hoursOfOperationNotes}
+//     <p> Brewery Type: ${data.locationType}`
 
-   const inputValue = document.querySelector('#brewery-search').value
-   console.log(inputValue)
-   fetchData(inputValue)
- })
+//   removeBrewery()
 
- removeBrewery()
-    
-function removeBrewery() {
-  const breweryContainer = document.querySelector('#brewery-data')
-  while (breweryContainer.lastChild) {
-    breweryContainer.removeChild(breweryContainer.lastChild)
-  }
-}
+//   console.log(breweryInfo)
+//   let dataContainer = document.querySelector('#brewery-data')
+//   dataContainer.insertAdjacentHTML('afterend', breweryInfo)
+//   return breweryInfo
 
-removeBrewery()
+//   removeBrewery()
+
+// }
+
+// const form = document.querySelector('form')
+// console.log(form)
+// form.addEventListener('search', (e) => {
+//   e.preventDefault()
+
+//   removeBrewery()
+
+//   const inputValue = document.querySelector('#brewery-search').value
+//   console.log(inputValue)
+//   fetchData(inputValue)
+// })
+
+
+
+// removeBrewery()
+
+// function removeBrewery() {
+//   const breweryContainer = document.querySelector('#get-brew')
+//   while (breweryContainer.lastChild) {
+//     breweryContainer.removeChild(breweryContainer.lastChild)
+//   }
+// }
+
+
+// removeBrewery()
