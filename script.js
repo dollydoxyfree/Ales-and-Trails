@@ -1,11 +1,10 @@
 // API docs = http://api.brewerydb.com/v2/{endpoint}/?key=be58abef0327aba1aa703a78ffa031fd
-const url = "https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd"
+const url = 'https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd'
 
 
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
+
+
+
 
 axios.get(url)
   .then((res) => {
@@ -19,8 +18,7 @@ axios.get(url)
 //   // async function fetchData(brewery) {
 
 //   try {
-//     const apiKey= 'be58abef0327aba1aa703a78ffa031fd'
-//     let res = await axios.get("http://api.brewerydb.com/v2/")
+//     let res = await axios.get(url)
 //     console.log(res.data.message)
 //     // let endpont = body.querySelector('#brewery-search').value
 //     let brewerySearch = Object.keys(res.data.message)
