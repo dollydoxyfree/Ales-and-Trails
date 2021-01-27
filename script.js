@@ -1,28 +1,56 @@
 // API docs = http://api.brewerydb.com/v2/{endpoint}/?key=be58abef0327aba1aa703a78ffa031fd
 
-const url = 'https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd'
 
-axios.get(url)
-  .then((res) => {
-    const results = res.data.data
-    console.log(results)
-})
-  .catch((err) => {
-  console.log(err)
-  })
+const getBreweryData= () => {
+  const url = 'https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd'
+
+  axios.get(url)
+    .then((res) => {
+      const results = res.data.data
+      // console.log(results)
+
+      results.forEach((brew) => {
+        // console.log(brew)
+
+        const dataDiv = document.querySelector('#brew-data')
+        // console.log(dataDiv)
+        const brewDiv = document.createElement('div')
+        dataDiv.append(brewDiv)
+
+        const breweryName = brew.brewery.name
+        const website = brew.brewery.website
+        const description = brew.brewery.description
+        const type = brew.locationTypeDisplay
+        const established = brew.brewery.established
+        const street = brew.streetAddress
+        const city = brew.locality
+        const state = brew.region
+        const zip = brew.postalCode
+        // const image = brew.brewery.images.squareMedium
+        console.log(breweryName)
 
 
+        
+ 
 
-const getBrewery = async () => {
-  try {
-    let res = await axios.get(url)
-    // console.log(res.data.data[27])
-    } catch (err) {
+      })
+    })
+    .catch((err) => {
       console.log(err)
-    }
-  }
+    })
+}
+getBreweryData()
 
-getBrewery()
+// const getBrewery = async () => {
+//   try {
+//     let res = await axios.get(url)
+//     // console.log(res.data.data[27])
+//     } catch (err) {
+//       console.log(err)
+//     }
+//   }
+
+// getBrewery()
 
 
 
