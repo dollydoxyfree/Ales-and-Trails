@@ -7,12 +7,14 @@ const getBreweryData= () => {
   axios.get(url)
     .then((res) => {
       const results = res.data.data
+      results.splice(42,1)
+     
       // console.log(results)
 
       results.forEach((brew) => {
         // console.log(brew)
 
-        const dataDiv = document.querySelector('#brew-data')
+        const dataDiv = document.querySelector('.brew-data')
         // console.log(dataDiv)
         const brewDiv = document.createElement('div')
         dataDiv.append(brewDiv)
@@ -32,13 +34,14 @@ const getBreweryData= () => {
         breweryInfo.textContent = `${breweryName} ${website} ${description} ${type} ${established} ${address} `
         brewDiv.append(breweryInfo)
 
-        // const image = brew.brewery.images.squareMedium
+        const logo = brew.brewery.images.squareMedium
 
         const image = document.createElement('img')
 
-        image.setAttribute('src', brew.brewery.images.squareMedium)
+        image.setAttribute('src', logo)
         image.setAttribute('alt', 'brewery-logo')
         brewDiv.append(image)
+
 
       })
     })

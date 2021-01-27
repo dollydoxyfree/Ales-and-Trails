@@ -23,7 +23,7 @@ body {
  }
 
  p {
-  color:rgb(146, 113, 144);
+  color:rgb(177, 34, 167);
   font-family: 'Fraunces', serif;
   font-weight: 50px;
    margin-left: auto;
@@ -44,13 +44,9 @@ body {
   /* align-self: center; */
  }
 
+.brew-data {
+  display: flex;
+  flex-flow: column;
+}
 
-
- #brew-data{
-    background-color: rgba(0, 128, 128, 0.404);
- }
-
- brewDiv {
-  width: auto;
-  flex-wrap: inherit;
- }
+ 
