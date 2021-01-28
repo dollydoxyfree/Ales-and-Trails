@@ -47,6 +47,9 @@ body {
 .brew-data {
   display: flex;
   flex-flow: column;
+  background-color: rgba(63, 63, 63, 0.212);
+  color:rgb(143, 0, 148);
+  justify-content:space-evenly;
+  font-size: smaller;
+  image
 }
-
- 
