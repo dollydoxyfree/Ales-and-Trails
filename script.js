@@ -1,13 +1,14 @@
 // API docs = http://api.brewerydb.com/v2/{endpoint}/?key=be58abef0327aba1aa703a78ffa031fd
 
 
+
 const getBreweryData = () => {
   const url = 'https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd'
 
   axios.get(url)
     .then((res) => {
       const results = res.data.data
-      results.splice(42, 1)
+      
 
       // console.log(results)
       removePrevious()
@@ -32,7 +33,15 @@ const getBreweryData = () => {
         const address = street + city + state + zip
 
         const breweryInfo = document.createElement('div')
-        breweryInfo.textContent = `${breweryName} ${website} ${description} ${type} ${established} ${address} `
+
+        breweryInfo.textContent = `
+        Brewery: ${breweryName} 
+        Website:${website}
+        Description: ${description} 
+        Type: ${type} 
+        ${established}
+        Address: ${address} `
+
         brewDiv.append(breweryInfo)
 
         const logo = brew.brewery.images.squareMedium
@@ -46,16 +55,32 @@ const getBreweryData = () => {
         // removePrevious()
 
       })
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-}
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+    }
 
 
-const button = document.querySelector('button')
-// console.log(button)
-button.addEventListener('click', getBreweryData)
+const form = document.querySelector('form')
+console.log(form)
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+    removePrevious()
+  const inputValue = document.querySelector('#input-search').value
+  console.log(inputValue)
+  getBreweryData(inputValue)
+  
+})
+
+
+
+
+
+// const button = document.querySelector('submit')
+// // console.log(button)
+// button.addEventListener('click', getBreweryData)
 
 function removePrevious() {
   const removeSearch = document.querySelector('.brew-data')

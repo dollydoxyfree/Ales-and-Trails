@@ -52,6 +52,6 @@ body {
   color:rgb(143, 0, 148);
   justify-content:space-evenly;
   font-size: smaller;
-  flex-wrap: nowrap;
+  flex-wrap:wrap;
   image-rendering: crisp-edges;
 }
