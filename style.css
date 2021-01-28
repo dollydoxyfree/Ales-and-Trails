@@ -37,11 +37,12 @@ body {
  .search {
    background-color: rgb(63, 63, 63);
   text-align: center;
-  color:rgb(143, 0, 148);
-  width: auto;
-  /* justify-content: center; */
-  /* width: 200px; */
-  /* align-self: center; */
+  color:rgb(58, 57, 58);
+  margin: auto;
+  width: 300px;
+  border: 5px solid grey;
+  padding: 10px;
+ 
  }
 
 .brew-data {
@@ -51,5 +52,6 @@ body {
   color:rgb(143, 0, 148);
   justify-content:space-evenly;
   font-size: smaller;
-  image
+  flex-wrap: nowrap;
+  image-rendering: crisp-edges;
 }

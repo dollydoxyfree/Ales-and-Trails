@@ -59,7 +59,7 @@ button.addEventListener('click', getBreweryData)
 
 function removePrevious() {
   const removeSearch = document.querySelector('.brew-data')
-  console.log(removeSearch.lastChild)
+  // console.log(removeSearch.lastChild)
   while (removeSearch.lastChild) {
     removeSearch.removeChild(removeSearch.lastChild)
   }
