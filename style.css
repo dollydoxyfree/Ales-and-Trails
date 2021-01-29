@@ -31,7 +31,7 @@ body {
    font-size: 15px;
    width: 600px;
    height: 35px;
-  background-color: rgba(15, 15, 15, 0.753)
+  /* background-color: rgba(15, 15, 15, 0.753) */
  }
 
  .search {
@@ -48,10 +48,32 @@ body {
 .brew-data {
   display: flex;
   flex-flow: column;
-  background-color: rgba(63, 63, 63, 0.212);
+  /* background-color: rgba(63, 63, 63, 0.212); */
   color:rgb(143, 0, 148);
-  justify-content:space-evenly;
-  font-size: smaller;
-  flex-wrap:wrap;
+  justify-content:safe;
+  font-size: x-small;
+  flex-wrap: nowrap;
   image-rendering: crisp-edges;
+  width: 500px;
+  position: relative;
+  align-content:center;
+  
 }
+.brew-data img{
+  position:absolute;
+  margin-left: 520px;
+  text-align: left;
+}
+
+#get-brewery {
+  background-color: grey;
+  
+}
+
+#input-search {
+  background-color: gray;
+}
+/* 
+div {
+ width: 80%;
+} */

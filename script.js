@@ -1,19 +1,20 @@
 // API docs = http://api.brewerydb.com/v2/{endpoint}/?key=be58abef0327aba1aa703a78ffa031fd
 
+// `https://api.openbrewerydb.org/breweries/search?query=${search}`
 
 
-const getBreweryData = () => {
+function getBreweryData () {
   const url = 'https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations/?key=be58abef0327aba1aa703a78ffa031fd'
 
   axios.get(url)
     .then((res) => {
       const results = res.data.data
-      
 
-      // console.log(results)
+
+      console.log(results)
       removePrevious()
 
-      results.forEach((brew) => {
+       results.forEach((brew) => {
         // console.log(brew)
 
         const dataDiv = document.querySelector('.brew-data')
@@ -21,26 +22,28 @@ const getBreweryData = () => {
         const brewDiv = document.createElement('div')
         dataDiv.append(brewDiv)
 
-        const breweryName = brew.brewery.name
-        const website = brew.brewery.website
-        const description = brew.brewery.description
-        const type = brew.locationTypeDisplay
-        const established = brew.brewery.established
-        const street = brew.streetAddress
-        const city = brew.locality
-        const state = brew.region
-        const zip = brew.postalCode
-        const address = street + city + state + zip
+        // const breweryName = brew.brewery.name
+        // const website = brew.brewery.website
+        // const description = brew.brewery.description
+        // const type = brew.locationTypeDisplay
+        // const established = brew.brewery.established
+        // const street = brew.streetAddress
+        // const city = brew.locality
+        // const state = brew.region
+        // const zip = brew.postalCode
+        // const address = street + city + state + zip
 
         const breweryInfo = document.createElement('div')
 
-        breweryInfo.textContent = `
-        Brewery: ${breweryName} 
-        Website:${website}
-        Description: ${description} 
-        Type: ${type} 
-        ${established}
-        Address: ${address} `
+        breweryInfo.innerHTML =
+
+          `
+        <h1>Brewery: ${brew.brewery.name} </h1>
+        <h3>Website:${brew.brewery.website}</h3>
+        <p>Description: ${brew.brewery.description} </p>
+        <h6>Type: ${brew.locationTypeDisplay}</h6> 
+        <h5> ${brew.brewery.established} </h5>
+        <h3>Address: ${brew.streetAddress} ${brew.locality} ${brew.region} ${brew.postalCode} </h3> `
 
         brewDiv.append(breweryInfo)
 
@@ -53,13 +56,16 @@ const getBreweryData = () => {
         brewDiv.append(image)
 
         // removePrevious()
+        return breweryInfo
 
       })
-          })
-          .catch((err) => {
-            console.log(err)
-          })
-    }
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
+
+
 
 
 const form = document.querySelector('form')
@@ -67,9 +73,10 @@ console.log(form)
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
-    removePrevious()
+  removePrevious()
   const inputValue = document.querySelector('#input-search').value
   console.log(inputValue)
+  // getBreweryData(inputValue)
   getBreweryData(inputValue)
   
 })
@@ -77,10 +84,6 @@ form.addEventListener('submit', (e) => {
 
 
 
-
-// const button = document.querySelector('submit')
-// // console.log(button)
-// button.addEventListener('click', getBreweryData)
 
 function removePrevious() {
   const removeSearch = document.querySelector('.brew-data')
@@ -91,4 +94,3 @@ function removePrevious() {
 }
 
 removePrevious()
-
