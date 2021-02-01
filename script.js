@@ -26,7 +26,6 @@ function getBreweryInfo(breweries) {
     // console.log(brewery)
 
 
-
     const breweriesContainer = document.querySelector('.brew-data')
     // console.log(dataDiv)
     const breweryContainer = document.createElement('div')
@@ -76,48 +75,14 @@ function getBreweryInfo(breweries) {
     addressThree.textContent = `
     ${brewery.postal_code}`
 
-    // type.textContent = `
-    // ${brewery.brewery_type}`
+    type.textContent = `
+    ${brewery.brewery_type}`
 
     phone.textContent = `
     ${brewery.phone}`
 
     website.textContent = `
     ${brewery.website_url}`
-
-
-
-      
-
-
-    // const brewName = brewery.name
-    // const street = brewery.street
-    // const city = brewery.city
-    // const state = brewery.state
-    // const zip = brewery.postal_code
-    // const type = brewery.brewery_type
-    // const phone = brewery.phone
-    // const website = brewery.website_url
-
-
-
-    // console.log(brewName, street, city, state, zip, type, phone, website)
-    
-    // const breweryInfo = document.createElement('div')
-    // breweryInfo.textContent = 
-      
-    // `
-    // ${brewName}
-    // ${street} 
-    // ${city}
-    // ${state}
-    // ${zip}
-    // ${type}
-    // ${phone}
-    // ${website}`
-
-    // dataDiv.append(breweryInfo)
-    
    
 
   })
@@ -126,8 +91,6 @@ function getBreweryInfo(breweries) {
 }
 
 // getBreweryInfo()
-
-
 
 const form = document.querySelector('form')
 // console.log(form)
@@ -142,10 +105,6 @@ form.addEventListener('submit', (e) => {
   getData(inputValue)
 })
 
-
-
-
-
 function removePrevious() {
   const removeSearch = document.querySelector('.brew-data')
   // console.log(removeSearch.lastChild)
@@ -155,6 +114,3 @@ function removePrevious() {
 }
 
 removePrevious()
-
-
-
