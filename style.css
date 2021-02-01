@@ -81,8 +81,10 @@ body {
  .brew-data {
   font-family: 'Cuprum', sans-serif;
   display: flexbox;
-  flex-flow: column;
+  flex-flow: row wrap;
   text-align: justify;
+  justify-content: center;
+  align-content: flex-start;
 } 
 
 .brewery {
@@ -90,7 +92,7 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-flow: row;
-  border: 5px solid goldenrod;
+  border: 7px solid goldenrod;
   background-color:rgba(245, 214, 147, 0.815);
   width: 280px;
   padding: initial;
@@ -128,7 +130,7 @@ h1 {
     text-align: center;
   }
 
-  .brewery-data {
+  .brew-data {
     display: flex;
     flex-flow: row;
     align-content:center;
@@ -136,6 +138,10 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     column-count: 2;
+  }
+  .brewery {
+    background-color: rgba(255, 170, 248, 0.952);
+    border: 5px solid rgb(170, 16, 119);
   }
 }
 

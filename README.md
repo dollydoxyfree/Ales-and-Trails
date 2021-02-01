@@ -51,7 +51,8 @@ This application will provide a user friendly experience, allowing the user to s
 #### PostMVP  
 
 - Animation 
-- Incorporate facts about hiking
+- connect a tags to brewery URL 
+- additional advanced styling to appended search results
 - Add unique UI and event listeners
 
 ## Project Schedule
