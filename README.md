@@ -1,12 +1,12 @@
 # Project Overview
 
-## Ales-and-Trails
+## BrewHub
 
-[Ales && Trails](https://github.com/dollydoxyfree/Ales-and-Trails.git)
+[BrewHub](https://github.com/dollydoxyfree/BrewHub)
 
 ## Project Description
 
-After a day of hiking and exploring the outdoors, there is nothing better than a nice cold beer.  Using the Ale's and Trails app, users will make the process of looking for a deciding on a brewery nearby.  
+Search for a local brewery to satisfy the users quench or meet for events.   
 
 ## API and Data Sample
 
@@ -34,19 +34,19 @@ After a day of hiking and exploring the outdoors, there is nothing better than a
 
 ## Wireframes
 
-[Ales && Trails Wireframe](https://whimsical.com/ales-trails-ETpbeYzjcrZqAyeepYaR6n)
+[BrewHub](https://whimsical.com/ales-trails-ETpbeYzjcrZqAyeepYaR6n)
 
 <img width="458" alt="Screen Shot 2021-01-26 at 8 51 28 AM" src="https://user-images.githubusercontent.com/75773700/105877605-060a7500-5fb5-11eb-8c34-0cfdf4f7a2a3.png">
 
 ### MVP/PostMVP
 
-This application will provide an input field upon loading, the user will enter their City and the output will randomize a trailhead and brewery near selected location.  This app will be geared towards phone use but will be just as clean and responsive on a desktop.  Beautiful imagery will pull the look together.
+This application will provide a user friendly experience, allowing the user to search with ease for a brewery by city, state or zip code.  The search will provide results that contain the Brewery information such as name and address.
 
 #### MVP 
 
 - Connect to brewery API to output local brewerys to user
 - Generates information within parameters specified by user input
-- Responds to both cell phone and desktop screens 
+- Responds to both cell phone and ipad screens, with a desktop friendly version available as well. 
 
 #### PostMVP  
 
@@ -58,11 +58,11 @@ This application will provide an input field upon loading, the user will enter t
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Jan 26| Project Approval / Core App Structure (HTML, CSS, etc.) | Incomplete
-|Jan 27| Connect to API | Incomplete
-|Jan 28| Initial Clickable Model/ DOM manipulation| Incomplete
-|Jan 29| MVP | Incomplete
+|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Jan 26| Project Approval / Core App Structure (HTML, CSS, etc.) | Complete
+|Jan 27| Connect to API | Complete
+|Jan 28| Initial Clickable Model/ DOM manipulation| Complete
+|Jan 29| MVP | Complete
 |Feb 1| Presentations/Project Submission | Incomplete
 
 ## Priority Matrix
@@ -74,19 +74,19 @@ This application will provide an input field upon loading, the user will enter t
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 8hrs| 5hrs | 5hrs |
-| Working with API | H | 10hrs | 12hrs | 10hrs |
-| DOM manipulation | H | 10hrs | 10hrs | 10hrs |
-| Responsive CSS | H | 8hrs | 4hrs | 4hrs |
-| Total | H | 40hrs| 31hrs | 31hrs |
+| Working with API | H | 10hrs | 15hrs | 15hrs |
+| DOM manipulation | H | 10hrs | 10hrs | 15hrs |
+| Responsive CSS | H | 8hrs | 4hrs | 2hrs |
+| Total | H | 40hrs| 31hrs | 37hrs |
 
 ## Code Snippet 
-I found working with animation enjoyable and look forward to learning and advancing with keyframes techniques.
+I found working with keyframes very enjoyable and look forward to advancing my skillset with additional animation techniques.
 ```
  @keyframes blink {
    0% {color: rgb(170, 16, 119);} 25% {color: rgb(218, 112, 209);} 50% {color: goldenrod;} 75% {color: orangered;} 100% {color:rgb(144, 0, 55);}
  }
 ```
- I struggle trying to understand the DOM and this bit helped me understand how to effectively append individual elements, helping me understand the bigger picture.
+ I struggled trying to understand the DOM and this bit helped me understand how to effectively append individual elements, helping me understand the bigger picture.
 ```
  const breweriesContainer = document.querySelector('.brew-data')
     // console.log(dataDiv)
@@ -96,4 +96,4 @@ I found working with animation enjoyable and look forward to learning and advanc
 ```
 
 ## Change Log
-Due to the limited amount of data, I needed to switch API.  Doing so, I refocused the purpose of the app to be solely for convenience in locating a brewery within users given parameters.  
+Due to the limited amount of data, I needed to switch API.  Doing so, I refocused the purpose of the app to be solely for convenience in locating a brewery within users given parameters.  The previous version would have been impossible to provide a dynamic search with the extreme limit of information provided.

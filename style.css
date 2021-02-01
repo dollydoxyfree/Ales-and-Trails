@@ -138,3 +138,9 @@ h1 {
     column-count: 2;
   }
 }
+
+@media screen and (min-width: 440px) and (max-width: 740px){
+  body {background-size: 0%;
+    background-color: black;
+  }
+}
