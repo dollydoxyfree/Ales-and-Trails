@@ -73,21 +73,27 @@ This application will provide an input field upon loading, the user will enter t
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 8hrs| 0hrs | 0hrs |
-| Working with API | H | 10hrs | 0hrs | 0hrs |
-| DOM manipulation | H | 16hrs | 0hrs | 0hrs |
-| Responsive CSS | H | 6hrs | 0hrs | 0hrs |
-| Total | H | 40hrs| 0hrs | 0hrs |
+| Adding Form | H | 8hrs| 5hrs | 5hrs |
+| Working with API | H | 10hrs | 12hrs | 10hrs |
+| DOM manipulation | H | 10hrs | 10hrs | 10hrs |
+| Responsive CSS | H | 8hrs | 4hrs | 4hrs |
+| Total | H | 40hrs| 31hrs | 31hrs |
 
-<!-- ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
+## Code Snippet 
+I found working with animation enjoyable and look forward to learning and advancing with keyframes techniques.
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+ @keyframes blink {
+   0% {color: rgb(170, 16, 119);} 25% {color: rgb(218, 112, 209);} 50% {color: goldenrod;} 75% {color: orangered;} 100% {color:rgb(144, 0, 55);}
+ }
+```
+ I struggle trying to understand the DOM and this bit helped me understand how to effectively append individual elements, helping me understand the bigger picture.
+```
+ const breweriesContainer = document.querySelector('.brew-data')
+    // console.log(dataDiv)
+    const breweryContainer = document.createElement('div')
+    breweryContainer.classList.add('brewery')
+    breweriesContainer.append(breweryContainer)
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.   -->
+Due to the limited amount of data, I needed to switch API.  Doing so, I refocused the purpose of the app to be solely for convenience in locating a brewery within users given parameters.  

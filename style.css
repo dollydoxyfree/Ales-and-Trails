@@ -3,7 +3,7 @@
 body {
   background-image: url("https://images.unsplash.com/photo-1586993451228-09818021e309?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWVyJTIwcG91cnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
   background-repeat: repeat-y;
-  background-size: 450px;
+  background-size: 100%;
 
  }
 
@@ -25,9 +25,9 @@ body {
    flex-grow: inherit;
    position:static;
 
-
-   /* https://www.w3schools.com/css/css3_animations.asp */
  }
+   /* https://www.w3schools.com/css/css3_animations.asp */
+ 
  @keyframes blink {
    0% {color: rgb(170, 16, 119);} 25% {color: rgb(218, 112, 209);} 50% {color: goldenrod;} 75% {color: orangered;} 100% {color:rgb(144, 0, 55);}
  }
@@ -98,3 +98,43 @@ body {
   text-align: justify;
 }
 
+
+
+
+
+@media screen and (min-width:440px){
+  body {
+    background-image: url ('https://unsplash.com/photos/1MqDCpA-2hU');
+    background-size: 100%;
+    font-family: 'Anton', sans-serif;
+  }
+  .title {
+    font-size: 100px;
+    text-align: center;
+  }
+h1 {
+  margin-top: 10px;
+}
+
+  #brewery-form {
+    margin-top: 100px;
+  }
+
+  p {
+    margin-top: 110px;
+    height: 40px;
+    width: 200px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .brewery-data {
+    display: flex;
+    flex-flow: row;
+    align-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-count: 2;
+  }
+}
